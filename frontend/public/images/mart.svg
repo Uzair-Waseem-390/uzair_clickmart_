@@ -1,0 +1,38 @@
+<svg width="600" height="160" viewBox="0 0 600 160" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Shopping Cart -->
+  <g transform="translate(20,25)">
+    <path d="M20 20H36L48 80H110L124 40H56"
+          stroke="#2563EB"
+          stroke-width="8"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+
+    <circle cx="64" cy="100" r="8" fill="#2563EB"/>
+    <circle cx="110" cy="100" r="8" fill="#2563EB"/>
+
+    <!-- Cursor -->
+    <path d="M92 4L108 40L98 36L92 52L84 48L90 32L76 32L92 4Z"
+          fill="#F97316"/>
+  </g>
+
+  <!-- Brand Name -->
+  <text x="170"
+        y="70"
+        font-family="Poppins, Arial, sans-serif"
+        font-size="56"
+        font-weight="700"
+        fill="#111827">
+    Click
+  </text>
+
+  <text x="170"
+        y="120"
+        font-family="Poppins, Arial, sans-serif"
+        font-size="56"
+        font-weight="700"
+        fill="#2563EB">
+    Mart
+  </text>
+
+</svg>
