@@ -8,7 +8,13 @@ SECRET_KEY = config('SECRET_KEY')
 
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = []
+def get_env_list(key: str) -> list[str]:
+    value = config(key)
+    return [item.strip() for item in value.split(",") if item.strip()]
+
+ALLOWED_HOSTS = get_env_list("ALLOWED_HOSTS")
+CORS_ALLOWED_ORIGINS = get_env_list("CORS_ALLOWED_ORIGINS")
+CSRF_TRUSTED_ORIGINS = get_env_list("CSRF_TRUSTED_ORIGINS")
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -126,7 +132,3 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173',
-]
